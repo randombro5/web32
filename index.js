@@ -219,41 +219,41 @@
 // });
 
  //1. Show how map is different from object to store key value pairs with coding example and prove Maps perform better than objects in most of the scenarios involving addition and removal of keys.                                 
- let map = new Map();
- let obj = {};
- console.time("map add");
- for (let i = 0; i < 100000; i++) {
-  map.set(i, i);
- }
- console.timeEnd("map add");
- console.time("obj add");
- for (let i = 0; i < 100000; i++) {
-  obj[i] = i;
- }
- console.timeEnd("obj add");
- // Remove 100,000 keys
- console.time("map delete");
- for (let i = 0; i < 100000; i++) {
-  map.delete(i);
- }
- console.timeEnd("map delete");
- console.time("obj delete");
- for (let i = 0; i < 100000; i++) {
-  delete obj[i];
- }
- console.timeEnd("obj delete");
+//  let map = new Map();
+//  let obj = {};
+//  console.time("map add");
+//  for (let i = 0; i < 100000; i++) {
+//   map.set(i, i);
+//  }
+//  console.timeEnd("map add");
+//  console.time("obj add");
+//  for (let i = 0; i < 100000; i++) {
+//   obj[i] = i;
+//  }
+//  console.timeEnd("obj add");
+//  // Remove 100,000 keys
+//  console.time("map delete");
+//  for (let i = 0; i < 100000; i++) {
+//   map.delete(i);
+//  }
+//  console.timeEnd("map delete");
+//  console.time("obj delete");
+//  for (let i = 0; i < 100000; i++) {
+//   delete obj[i];
+//  }
+//  console.timeEnd("obj delete");
 
 
 
- const mySet = new Set(Array.from({length: 100000}, (_, i) => i));
-// Creating an Array with 100,000 unique values
-const myArray = Array.from({length: 100000}, (_, i) => i);
-console.time("set-search");
-mySet.has(99999);
-console.timeEnd("set-search"); 
-console.time("array-search");
-myArray.includes(99999);
-console.timeEnd("array-search"); 
+//  const mySet = new Set(Array.from({length: 100000}, (_, i) => i));
+// // Creating an Array with 100,000 unique values
+// const myArray = Array.from({length: 100000}, (_, i) => i);
+// console.time("set-search");
+// mySet.has(99999);
+// console.timeEnd("set-search"); 
+// console.time("array-search");
+// myArray.includes(99999);
+// console.timeEnd("array-search"); 
 
 
 
